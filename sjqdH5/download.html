@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>注册页</title>
+    <script src="js/consts.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="banner">
+        <img src="images/banner.png">
+    </div>
+    <div class="success">
+        <div class="pof">
+            <img src="images/alert_bg.png" class="bg" alt="">
+            <img src="images/ios_guide.png" alt="" class="iosGuide">
+        </div>
+        <div class="downloadBtn"> <a id="iosDownload" style="color: #fff;">立即下载</a></div>
+        <!-- <ul>
+            <li>
+                <a id="iosDownload" class="fr" >
+                    <img src="images/iphone.png" class="iosImages">
+                </a>
+            </li>
+            <li>
+                <a id="androidDownload" class="fl" >
+                    <img src="images/android.png" class="andriodImages">
+                </a>
+            </li>
+        </ul> -->
+    </div>
+    <div class="layer"></div>
+    <div class="layer2"></div>
+    <script>
+        document.getElementById('iosDownload').setAttribute('href', iosAddress);
+        document.getElementById('androidDownload').setAttribute('href', androidAddress);
+    </script>
+</body>
+
+</html>

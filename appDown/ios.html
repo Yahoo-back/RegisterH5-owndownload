@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>闪借钱袋IOS下载页</title>
+    <script src="js/consts.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+    <link href="css/android.css" rel="stylesheet">
+    <meta property="og:image" content="http://fgnass.github.com/spin.js/assets/preview.jpg?v=1" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" />
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="syalert/syalert.min.css" />
+    <script src="syalert/syalert.min.js"></script>
+</head>
+
+<body>
+   <div>
+    <div id="ts">
+        <img class="infoImg" src="./images/info.jpg">
+    </div>
+        <!-- <div id="ts">
+            <span class="ts">请点击右上角选择"浏览器中打开"</span>
+            <div class="kongxin"></div>
+        </div> -->
+    </div>
+    <div id="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+       <img class="logo" src="images/logo.png"/>
+        <div class="logoName">闪借钱袋</div>
+        <a style="text-decoration: none" id="clj">
+        <div class="azBtn">点击安装</div>
+        </a>
+        <div class="sy-alert sy-alert-alert animated" sy-enter="zoomIn" sy-leave="zoomOut" sy-type="alert" sy-mask="true" id="alert3">
+            <div class="sy-title">温馨提示</div>
+            <div class="sy-content">正在安装请返回桌面查看</div>
+            <div class="sy-btn">
+            <button onClick="ok('alert3')">确定</button>
+            </div>
+        </div>
+         <!-- 消息弹窗 -->
+        <div class="sy-alert sy-alert-alert animated" sy-enter="zoomIn" sy-leave="zoomOut" sy-type="alert" sy-mask="true" id="alert2">
+            <div class="sy-title">温馨提示</div>
+            <div class="sy-content">微信/QQ内无法下载应用,请点击右上角选择"浏览器中打开"</div>
+            <div class="sy-btn">
+            <button onClick="ok('alert2')">确定</button>
+            </div>
+        </div>
+  
+        <div class="intro1">点击安装后，请返回桌面查看</div>
+        <div class="intros">
+        <div class="intros1">安装完成后，请到：</div>
+        <div class="intros1">"<span style="color: #00a8fd">设置</span>"->"<span style="color: #00a8fd">通用</span>"->"<span style="color: #00a8fd">设备管理器</span>"</div>
+        <div class="intros1">找到小鲨分期App的描述问件，设置为信任。</div>
+        <div class="img">
+        <img class="img1" src="images/intro1.png"/>
+        <img class="img1" src="images/intro2.png"/>
+        <img class="img1" src="images/intro3.png"/>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        	document.oncontextmenu = function () { return false; };
+	//禁用开发者工具F12
+	document.onkeydown = function () {
+	if (window.event && window.event.keyCode == 123) {
+	event.keyCode = 0;
+	event.returnValue = false;
+	return false;
+	}
+	};
+        function ok(id){
+            syalert.syhide(id);	
+        }
+        window.onload=function(){
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                var a =  document.getElementById('clj');
+                a.onclick=function(){
+                    syalert.syopen('alert2')
+                }
+            } else {
+                var a =  document.getElementById('clj');
+                var loading = document.getElementById('loading');
+                a.onclick=function(){
+                    syalert.syopen('alert3')
+                    loading.style.display = "block"
+                    $('#loading').attr('data-show',1);
+                    setTimeout(function(){
+                        loading.style.display = "none"
+                    },6000)
+                }
+                var wx = document.getElementById('ts');
+                wx.style.display = "none"
+                document.getElementById('clj').setAttribute('href', "itms-services://?action=download-manifest&url=https://downlist.wrxycq.cn/");
+               
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>注册页</title>
+    <script src="js/consts.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+         #box{height: 140px; border: solid 1px; overflow: hidden;}
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color:#b3b3b3 !important;
+            padding-left: 12px !important;
+            
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:#b3b3b3 !important;
+            opacity: 1;
+            padding-left: 12px !important;
+            
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:#b3b3b3 !important;
+            opacity:  1;
+            padding-left: 12px !important;
+            
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:   #b3b3b3 !important;
+            padding-left: 12px !important;
+            
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color:   #b3b3b3 !important;
+            padding-left: 12px !important;
+            
+        }
+        </style>
+</head>
+
+<body>
+	<div id="bgColor">
+    <div class="banner por">
+        <img src="images/banner.png">
+    </div>
+    <div style="width: 92%;margin-left:4%;background-color: #fff;height:50px;border-radius: 10px;margin-bottom: 20px;">
+        <img src="images/info.png" style="width: 26px;height: 30px;margin-top: 10px;margin-left: 5px;line-height: 30px;position:absolute;">
+        <div id="ggg" >
+        <ul id="g1" >
+            <li class="g1" >恭喜139****5217成功下款50000元</li>
+            <li class="g1" >恭喜178****6989成功下款30000元</li>
+            <li class="g1" >恭喜152****3250成功下款50000元</li>
+            <li class="g1" >恭喜181****0236成功下款80000元</li>
+            <li class="g1" >恭喜150****9932成功下款20000元</li>
+            <li class="g1" >恭喜186****1851成功下款30000元</li>
+            <li class="g1" >恭喜166****5631成功下款60000元</li>
+        </ul>
+        <ul id="g2" onMouseOut="Up()" onMouseOver="Stop()"></ul>
+        </div>
+
+    </div>
+    <div class="container">
+    <div class="main">
+        <div class="middle" >
+            <div class="telNumber div" style="margin-top: 20px;">
+                <dl class="d-webkit">
+                    <dt>手机号码</dt>
+                    <dd class="box-flex">
+                        <input class="telTxt" type="text" placeholder="请输入注册手机号" maxlength="11" validate="n" minLen="11">
+                    </dd>
+                </dl>
+            </div>
+            <div class="code div d-webkit">
+                <dl class="d-webkit box-flex">
+                    <dt>短信验证码</dt>
+                    <dd class="box-flex">
+                        <span class="putCode">
+                            <input class="codeTxt" type="text"   placeholder="请输入验证码" maxlength="8" validate="n" minLen="2">
+                        </span>
+                    </dd>
+                    <!-- <span class="diver"></span> -->
+                    <dd> <button class="getCode getCode2" onclick="settime()">获取</button></dd>
+                </dl>
+            </div>
+            <div class="application" style="width: 96%;margin-left: 2%;">
+                <div class='applicationBtn' style="margin-bottom: 10px">
+                    <div class="registBtn"><img style="height: 50px;" src="images/btn.png"></div>
+                </div>
+            </div> 
+            <div class="agreen">
+                <input type="checkbox" id="agree" checked>
+                <label for="agree">
+                    <span class="reader" style="color: #999">我已阅读并同意</span>
+                </label>
+                <span class="protocol">
+                    <a id="agreement">《用户注册协议》</a>
+                    <!-- <a id="mzsm">《免责声明》</a> -->
+                    <!-- <a id="agreement">《用户服务协议》</a> -->
+                </span>
+               
+            </div>
+        </div>
+       
+
+    </div>
+    <div class="bah">鲁ICP备20008681号-4</div>
+    <img style=" position: relative;margin-bottom: 30px;" src="images/bottom.png">
+   
+    <div class="success hide">
+        <div class="pof">
+            <img src="images/alert_bg.png" class="bg" alt="">
+            <img src="images/ios_guide.png" alt="" class="iosGuide">
+        </div>
+        <div class="downloadBtn"> <a id="iosDownload" style="color: #fff;">立即下载</a></div>
+        <!-- <ul>
+            <li>
+                <a id="iosDownload" class="fr" >
+                    <img src="images/iphone.png" class="iosImages">
+                </a>
+            </li>
+            <li>
+                <a id="androidDownload" class="fl" >
+                    <img src="images/android.png" class="andriodImages">
+                </a>
+            </li>
+        </ul> -->
+    </div>
+	</div>  
+    <div class="layer hide"></div>
+    <div class="layer2 hide"></div> 
+     <script language="javascript" type="text/javascript">
+      var ggg=document.getElementById("ggg");
+				var g1=document.getElementById("g1");
+				var g2=document.getElementById("g2");
+				var s=document.getElementsByTagName("li");
+				var speed=50;
+				g2.innerHTML=g1.innerHTML;
+				function  ScrollUp(){
+						if( ggg.scrollTop>=g1.scrollHeight){
+								ggg.scrollTop=0;
+						}else
+								ggg.scrollTop++;
+				}
+				var i=setInterval("ScrollUp()",speed);
+				function Stop(){
+						clearInterval(i);
+				}
+				function Up(){
+						i=setInterval("ScrollUp()",speed);
+				}
+                window.onload=function(){ 
+                    var agreement = document.getElementById('agreement');
+                    agreement.setAttribute('href', serverUrl+'/h5/shhAgree.html');
+                    // var mzsm = document.getElementById('mzsm');
+        // mzsm.setAttribute('href', serverUrl+'/h5/mzsm.html');
+        document.title = appName + '注册页';
+        document.getElementById('appName').innerHTML = appName;
+        // var iosDownload = document.getElementById('iosDownload');
+        // iosDownload.setAttribute('href', iosAddress);
+        // var androidDownload = document.getElementById('androidDownload');
+        // androidDownload.setAttribute('href', androidAddress);
+        // document.getElementById('iosDownload').setAttribute('href', iosAddress);
+        // document.getElementById('androidDownload').setAttribute('href', androidAddress);
+                }
+
+		
+				// var speed=50
+				// gg1.innerHTML=gg2.innerHTML
+				// function Marquee(){
+				// if(gg2.offsetTop-ggg.scrollTop<=0)
+				// ggg.scrollTop-=gg1.offsetHeight
+				// else{
+				// ggg.scrollTop++
+				// }
+				// }
+				// var MyMar=setInterval(Marquee,speed)
+				// ggg.onmouseover=function() {clearInterval(MyMar)}
+                // ggg.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+              
+        document.getElementById('iosDownload').setAttribute('href', iosAddress);
+        // document.getElementById('androidDownload').setAttribute('href', androidAddress);
+
+
+    </script> 
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>闪借钱袋下载页</title>
+    <script src="js/consts.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/regist.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="banner">
+        <img src="images/banner.png">
+    </div>
+    <!-- <img src="images/alert_bg.png" > -->
+    <div class="success">
+        <img style="margin-top: 50%;" src="images/alert_bg.png" >
+        <!-- <div class="pof">
+            <img style="margin-top: 50%;" src="images/alert_bg.png" >
+            <img src="images/alert_bg.png" class="bg" alt="">
+            <img src="images/alert_bg.png" class="iosGuide" alt="">
+        </div> -->
+        <ul>
+            <li>
+                <a class="fr" >
+                    <div  class="iosBtn"><img style="margin-top: 5%;margin-right: 5px;" src="./images/pg1.png" /><span onclick="ios()">IOS下载</span></div>
+                    <!-- <img src="images/iphone.png" class="iosImages"> -->
+                </a>
+            </li>
+            <li>
+                <a  class="fl" >
+                    <div class="androidBtn"><img style="margin-top: 5%;margin-right: 5px;" src="./images/az123.png" /><span onclick="android()">安卓下载</span></div>
+                    <!-- <img src="images/android.png" class="andriodImages"> -->
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="layer"></div>
+    <div class="layer2"></div>
+    <script>
+        	document.oncontextmenu = function () { return false; };
+	//禁用开发者工具F12
+	document.onkeydown = function () {
+	if (window.event && window.event.keyCode == 123) {
+	event.keyCode = 0;
+	event.returnValue = false;
+	return false;
+	}
+	};
+        function ios(){
+            window.location.href="./ios.html"
+        }
+        function android(){
+            window.location.href="./android.html"
+        }
+        document.getElementById('iosDownload').setAttribute('href', iosAddress);
+        document.getElementById('androidDownload').setAttribute('href', androidAddress);
+    </script>
+</body>
+
+</html>
